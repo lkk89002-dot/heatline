@@ -16,14 +16,13 @@
 
 ## The problem
 
-Extreme heat is Jamaica's fastest-growing climate-health hazard. Four major heat
-waves struck between 2023 and 2025, and the Ministry of Health and Wellness has
-warned that heat exposure can be "potentially fatal." Yet:
-
-- Jamaica's Meteorological Service issues **no operational heat warning product**.
-- The 2025 regional Caribbean heat-health bulletin pilots **do not yet cover Jamaica**.
-- Health advice reaches the public **only as press releases** — not as timely,
-  personal, actionable guidance to the people most at risk.
+Extreme heat is one of Jamaica's clearest climate-health hazards. In 2024,
+people in Jamaica were exposed to 48 heatwave days on average, 47 of which the
+Lancet Countdown country data attributes to climate change; the Ministry of
+Health and Wellness has warned that excessive heat stress can be "potentially
+fatal." Jamaica has weather alerts, health advisories and regional
+climate-health bulletins, but vulnerable residents still lack a last-mile,
+personalized heat-health advisory and surveillance channel.
 
 Heatline fills that gap.
 
@@ -89,9 +88,9 @@ illustrative fixture to exercise the alert path on demand.
 
 ## AI backends (swappable, optional)
 
-Heatline **never requires** an LLM. With no key configured it uses the reviewed
-playbook templates, so delivery is never blocked by a missing key or a provider
-outage. To enable AI personalisation, set one of:
+Heatline **never requires** an LLM. With no key configured it uses static
+playbook templates grounded in public guidance, so delivery is never blocked by a
+missing key or a provider outage. To enable AI personalisation, set one of:
 
 | Variable | Effect |
 |---|---|
@@ -133,6 +132,10 @@ Code under the [MIT License](LICENSE). Weather data by
 grounded in [WHO](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health),
 [PAHO](https://www.paho.org/en/documents/heatwaves-guide-health-based-actions) and
 [CDC](https://www.cdc.gov/extreme-heat/about/) public materials.
+Problem framing also draws on the
+[Lancet Countdown Jamaica 2025 data sheet](https://lancetcountdown.org/wp-content/uploads/2025/11/Jamaica_Lancet-Countdown_2025_Data-Sheet.pdf)
+and a
+[Jamaica Ministry of Health and Wellness heat advisory](https://www.moh.gov.jm/jamaicans-urged-to-reduce-heat-exposure/).
 
 ## Acknowledgements
 

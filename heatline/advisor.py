@@ -2,9 +2,9 @@
 
 This is the half of Heatline a broadcast system cannot do — "My mother has
 hypertension; is tomorrow safe for the market?". The answer is grounded in the
-location's actual forecast and the reviewed playbook guidance, and the model
-is instructed never to invent medical facts and to defer to emergency services
-for red-flag symptoms (do-no-harm).
+location's actual forecast and static playbook guidance, and the model is
+instructed never to invent medical facts and to defer to emergency services for
+red-flag symptoms (do-no-harm).
 """
 
 from __future__ import annotations

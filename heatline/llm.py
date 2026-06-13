@@ -1,8 +1,8 @@
 """Swappable AI backends (Anthropic / OpenAI / none) behind one function.
 
 Heatline never *requires* an LLM. With no key configured, the system falls
-back to the reviewed playbook templates, so alert delivery is never blocked
-by a missing key or a provider outage (do-no-harm). Set:
+back to static playbook templates grounded in public guidance, so alert delivery
+is never blocked by a missing key or a provider outage (do-no-harm). Set:
 
   HEATLINE_LLM_PROVIDER  anthropic | openai | none   (default: auto-detect)
   HEATLINE_LLM_MODEL     model id override

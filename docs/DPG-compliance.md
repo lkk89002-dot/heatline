@@ -20,9 +20,10 @@ recognition will be pursued separately.
 
 Every run publishes a dated bulletin (`bulletins/archive/YYYY-MM-DD.md`) and an
 optional JSONL message log. Over time this becomes a public, reproducible record
-of heat-stress conditions and advisories — data Jamaica does not currently
-publish — intended for release under CC-BY for use by the Ministry of Health and
-CARPHA. No personal data is included.
+of heat-stress conditions and advisories — a structured heat-health log that can
+help fill a documented climate-health surveillance gap — intended for release
+under CC-BY for use by the Ministry of Health and CARPHA. No personal data is
+included.
 
 ## What is not yet done
 

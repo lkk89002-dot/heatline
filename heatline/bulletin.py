@@ -2,7 +2,7 @@
 
 The bulletin doubles as Heatline's open dataset seed: every run archives the
 detected alert windows, so the repository accumulates a public, dated record
-of heat-stress conditions — data Jamaica does not currently publish.
+of heat-stress conditions and advisory decisions for later review.
 """
 
 from __future__ import annotations
