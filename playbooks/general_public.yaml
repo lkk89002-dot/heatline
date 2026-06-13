@@ -1,0 +1,43 @@
+audience: general_public
+display_name: "General public"
+voice: true
+
+sources:
+  - "WHO — Heat and health (fact sheet)"
+  - "CDC — Protect yourself from the dangers of extreme heat"
+  - "PAHO — Heatwaves: a guide for health-based actions"
+
+key_risks:
+  - "Heat illness is largely preventable with simple actions taken early."
+
+protective_actions:
+  - "Drink water regularly through the day, even before you feel thirsty."
+  - "Stay out of the sun during the hottest hours; find shade, a fan, or a cooled space."
+  - "Wear light, loose clothing; take cool showers; keep your home shaded by day and aired at night."
+  - "Never leave children, older people or pets in a parked vehicle."
+  - "Check on neighbours who are older, unwell or live alone."
+
+warning_signs:
+  - "Heat exhaustion: heavy sweating, weakness, dizziness, headache, nausea — rest, cool down, sip water."
+  - "Heat stroke (EMERGENCY): confusion, hot skin, fainting, or sweating stops — call for help and cool the person immediately."
+
+messages:
+  watch: |
+    ☀️ HEAT WATCH — {location}, {date}
+    Hot conditions near {peak_hi}°C expected around {window}.
+    • Drink water through the day
+    • Stay out of the midday sun; find shade or a cool room
+    • Check on elderly or unwell neighbours
+    Ask me anything about staying safe.
+  warning: |
+    🟠 HEAT WARNING — {location}, {date}
+    Dangerous heat near {peak_hi}°C around {window}.
+    • Limit time outdoors in peak hours; keep cool and hydrated
+    • Never leave anyone in a parked vehicle
+    • Heat stroke (confusion, hot skin, fainting) = call {ambulance} now and cool the person with water.
+  emergency: |
+    🔴 EXTREME HEAT — {location}, {date}
+    Heat index up to {peak_hi}°C. Take this seriously.
+    • Stay in the coolest place you can; avoid the sun between {window}
+    • Drink water often; check on anyone at risk near you
+    • Emergency signs (confusion, fainting, hot skin): call {ambulance} immediately and cool the body with water.

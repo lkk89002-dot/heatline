@@ -1,0 +1,43 @@
+audience: elderly_caregiver
+display_name: "Family and caregivers of older adults"
+voice: true
+
+sources:
+  - "WHO — Heat and health (fact sheet)"
+  - "PAHO — Heatwaves: a guide for health-based actions"
+  - "CDC — Extreme heat: people at increased risk"
+
+key_risks:
+  - "Older adults sense heat and thirst less, and many take medicines that affect heat tolerance."
+  - "The most heat-vulnerable people are often the least connected — a check-in from family is the intervention."
+
+protective_actions:
+  - "Phone or visit your older relatives at least once a day during the alert; more if they live alone."
+  - "Make sure they are drinking water through the day even when not thirsty."
+  - "Keep their home cool: open windows at night, close curtains by day, use a fan with a damp cloth, or move them to the coolest room or a public cooled space."
+  - "Check that fans/cooling work and that they are dressed in light clothing."
+  - "Review with their doctor or pharmacist whether any medicines need attention in heat — do not stop any medicine on your own."
+
+warning_signs:
+  - "Confusion, very hot skin, fainting, or no sweating in an older person is a medical emergency — call for help at once."
+  - "Less urine, dark urine, dizziness or muscle cramps mean they need water and cooling now."
+
+messages:
+  watch: |
+    ☀️ HEAT WATCH — {location}, {date}
+    Heat near {peak_hi}°C around {window}. Please check on older family members today:
+    • Make sure they drink water through the day
+    • Keep their room cool (curtains closed by day, fan + damp cloth)
+    Older adults feel heat less, so your check-in matters.
+  warning: |
+    🟠 HEAT WARNING — {location}, {date}
+    Dangerous heat near {peak_hi}°C around {window}. For older relatives:
+    • Call or visit today — more than once if they live alone
+    • Water through the day; move them to the coolest room or a cooled public space
+    • Confusion, fainting, hot dry skin or no sweating = call {ambulance} now and cool them with damp cloths.
+  emergency: |
+    🔴 EXTREME HEAT — {location}, {date}
+    Heat index up to {peak_hi}°C. Older adults are at serious risk today.
+    • Check in person if you can, repeatedly
+    • Keep them cool and drinking; do not leave anyone in a parked vehicle
+    • Heat stroke signs (confusion, hot skin, fainting): call {ambulance} immediately and cool the body with water while you wait.

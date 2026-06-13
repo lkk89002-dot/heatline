@@ -1,0 +1,14 @@
+# Example opt-in subscriber roster. Copy to roster.jsonl and fill with real,
+# consented contacts. roster.jsonl is git-ignored and must never be committed.
+# One JSON object per line. Lines starting with # and blank lines are ignored.
+#
+# audience  : must match a playbook in playbooks/ (outdoor_worker,
+#             elderly_caregiver, chronic_illness, community_health_aide,
+#             general_public)
+# channel   : console | jsonl | whatsapp | sms | messenger
+# recipient : phone number / messaging id the channel understands (opaque)
+{"audience": "outdoor_worker", "channel": "whatsapp", "recipient": "+18765550100"}
+{"audience": "elderly_caregiver", "channel": "whatsapp", "recipient": "+18765550101"}
+{"audience": "chronic_illness", "channel": "sms", "recipient": "+18765550102"}
+{"audience": "community_health_aide", "channel": "whatsapp", "recipient": "+18765550111"}
+{"audience": "general_public", "channel": "messenger", "recipient": "1000000000000001"}

@@ -1,0 +1,32 @@
+name: Daily bulletin (demo)
+
+# Runs the pipeline against LIVE Open-Meteo forecasts twice a day and uploads
+# the generated Jamaica heat-health bulletin as a build artifact. This is a
+# public demonstration that Heatline runs end-to-end on real data; it does not
+# message anyone (console channel only, no credentials).
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 06:00 America/Jamaica
+    - cron: "0 20 * * *"   # 15:00 America/Jamaica
+  workflow_dispatch: {}
+
+jobs:
+  bulletin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Generate live bulletin
+        run: heatline run --channels console --bulletins bulletins
+      - name: Upload bulletin
+        uses: actions/upload-artifact@v4
+        with:
+          name: jamaica-heat-bulletin
+          path: bulletins/
+          retention-days: 14

@@ -1,0 +1,51 @@
+# The megaphone playbook: institutional relayers (community health aides, Red
+# Cross volunteers, church and community leaders) receive a briefing formatted
+# for onward relay to the households and groups they already serve.
+audience: community_health_aide
+display_name: "Community health aides, Red Cross volunteers and community leaders"
+voice: false
+
+sources:
+  - "PAHO — Heatwaves: a guide for health-based actions"
+  - "WHO — Heat and health (fact sheet)"
+  - "IFRC — Heatwave early action guidance"
+
+key_risks:
+  - "Warnings save lives only when a trusted local person passes them on and helps people act."
+  - "Priority households: older people living alone, pregnant women, infants, outdoor workers, people with chronic illness."
+
+protective_actions:
+  - "Relay the core message to the households on your list, in person where you can."
+  - "Prioritise visits/calls to older people living alone and others at highest risk."
+  - "Help people set up cooling at home and know where the nearest cooled public space is."
+  - "Carry the warning signs of heat exhaustion and heat stroke and what to do."
+  - "Report back any heat-related illness you see so the response can be tracked."
+
+warning_signs:
+  - "Teach: heat exhaustion (heavy sweating, weak, dizzy, nausea) → rest, shade, water, cool the skin."
+  - "Teach: heat stroke (confusion, hot skin, fainting, no sweating) → call the ambulance, cool with water immediately."
+
+messages:
+  watch: |
+    ☀️ HEAT WATCH BRIEFING — {location}, {date}
+    Heat index near {peak_hi}°C around {window}.
+    Please relay to your households today:
+    • Drink water through the day; rest in the coolest place at peak hours
+    • Check on older neighbours living alone
+    Priority: elderly alone, infants, outdoor workers, chronic illness.
+    Heat exhaustion → shade, water, cool skin. Heat stroke (confusion/fainting/hot skin) → call {ambulance}.
+  warning: |
+    🟠 HEAT WARNING BRIEFING — {location}, {date}
+    Dangerous heat near {peak_hi}°C around {window}.
+    Action today:
+    • Visit/call your priority households, especially elderly living alone
+    • Help set up home cooling; share location of nearest cooled space
+    • Reschedule outdoor group activities out of peak heat
+    Heat stroke (confusion, hot skin, fainting, no sweating) is an EMERGENCY — call {ambulance} and cool with water. Report any cases you see.
+  emergency: |
+    🔴 EXTREME HEAT BRIEFING — {location}, {date}
+    Heat index up to {peak_hi}°C. Highest alert.
+    • Reach every priority household you can, in person
+    • Move at-risk people to the coolest available space; ensure they are drinking
+    • Be ready to act on heat stroke: call {ambulance}, cool the body with water immediately
+    Please report heat-related illness so the parish response can respond.

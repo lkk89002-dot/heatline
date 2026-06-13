@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heatline"
+version = "0.1.0"
+description = "Open-source AI heat-health early warning and advisory for Jamaica and other LDCs/SIDS"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Heatline contributors" }]
+keywords = ["climate", "health", "early-warning", "heat", "digital-public-good", "jamaica"]
+dependencies = [
+    "requests>=2.31",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+heatline = "heatline.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tom231826-svg/heatline"
+Issues = "https://github.com/tom231826-svg/heatline/issues"
+
+[tool.setuptools.packages.find]
+include = ["heatline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

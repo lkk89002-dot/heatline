@@ -1,0 +1,43 @@
+audience: chronic_illness
+display_name: "People with heart, kidney, lung disease, diabetes or hypertension"
+voice: false
+
+sources:
+  - "WHO — Heat and health (fact sheet)"
+  - "PAHO — Heatwaves: a guide for health-based actions"
+  - "CDC — Extreme heat and your health"
+
+key_risks:
+  - "Heat strains the heart and kidneys and can worsen cardiovascular disease, diabetes and respiratory illness."
+  - "Some common medicines change how the body handles heat and fluids."
+
+protective_actions:
+  - "Stay in the coolest place you can during peak heat; limit exertion in the hottest hours."
+  - "Keep drinking water, but if you are on fluid restriction for heart or kidney disease, follow your doctor's limit."
+  - "Take your medicines as prescribed — never stop or change a dose because of heat; ask your doctor or pharmacist if unsure."
+  - "Keep rescue medicines (e.g. inhalers) close and out of direct heat."
+
+warning_signs:
+  - "Chest pain, breathlessness, severe dizziness, fainting or confusion: seek emergency care."
+  - "Swelling, sharp drop in urine, or unusual fatigue: contact your clinic."
+
+messages:
+  watch: |
+    ☀️ HEAT WATCH — {location}, {date}
+    Heat near {peak_hi}°C around {window}. If you have a heart, kidney, lung condition, diabetes or high blood pressure:
+    • Rest in the coolest place during peak hours
+    • Keep taking your medicines as normal
+    • Drink water (follow your doctor's limit if you have one)
+    Reply with a question any time.
+  warning: |
+    🟠 HEAT WARNING — {location}, {date}
+    Dangerous heat near {peak_hi}°C around {window}. Your condition raises your risk today.
+    • Stay cool and avoid exertion in the hottest hours
+    • Do NOT stop your medicines — ask your pharmacist if worried
+    • Chest pain, breathlessness, fainting or confusion = call {ambulance} now.
+  emergency: |
+    🔴 EXTREME HEAT — {location}, {date}
+    Heat index up to {peak_hi}°C — high risk for people with chronic illness.
+    • Stay in the coolest available space; ask someone to check on you
+    • Keep medicines as prescribed and rescue inhalers nearby
+    • Emergency signs (chest pain, severe breathlessness, fainting, confusion): call {ambulance} immediately.

@@ -1,0 +1,57 @@
+# Heatline country configuration — Jamaica (pilot)
+#
+# This single file is everything country-specific. To deploy Heatline in
+# another country, copy this file, change the locations, thresholds, language
+# and emergency numbers, and run. No code changes are required.
+#
+# Alert thresholds are heat-index values in °C, grounded in the US NWS heat
+# index categories (Danger begins ~39.4 °C / 103 °F) and WHO/PAHO heat-health
+# guidance. They are deliberately conservative and REQUIRE sign-off from the
+# national health authority before any live deployment — they are starting
+# points, not clinical thresholds.
+
+country: Jamaica
+timezone: America/Jamaica
+language: "English (Jamaican)"
+
+emergency:
+  Police: "119"
+  Ambulance/Fire: "110"
+
+day_window:
+  start_hour: 8
+  end_hour: 18
+
+forecast:
+  days: 7
+
+# Most severe wins when more than one threshold is met. min_consecutive_hours
+# requires the heat index to hold for that many daytime hours, so brief spikes
+# do not trigger alerts (alert-fatigue mitigation).
+alert_levels:
+  - name: watch
+    hi_c: 38
+    min_consecutive_hours: 3
+  - name: warning
+    hi_c: 41
+    min_consecutive_hours: 2
+  - name: emergency
+    hi_c: 45
+    min_consecutive_hours: 1
+
+# A spread across coastal and inland parishes. Coordinates are parish capitals
+# / major towns.
+locations:
+  - { name: "Kingston",        lat: 17.9712, lon: -76.7936 }
+  - { name: "Spanish Town",    lat: 17.9910, lon: -76.9574 }
+  - { name: "Montego Bay",     lat: 18.4762, lon: -77.8939 }
+  - { name: "May Pen",         lat: 17.9656, lon: -77.2455 }
+  - { name: "Savanna-la-Mar",  lat: 18.2189, lon: -78.1332 }
+  - { name: "Mandeville",      lat: 18.0419, lon: -77.5072 }
+
+# Channels to use for delivery. console + jsonl always work with no
+# credentials; whatsapp/sms/messenger run in dry-run mode until their
+# environment variables are set (see docs/deployment.md).
+channels:
+  - console
+  - jsonl

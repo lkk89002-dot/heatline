@@ -1,0 +1,43 @@
+audience: outdoor_worker
+display_name: "Outdoor workers (farmers, construction, vendors, fishers)"
+voice: false
+
+sources:
+  - "WHO — Heat and health (fact sheet)"
+  - "WHO/WMO — Occupational heat stress guidance (2025)"
+  - "CDC/NIOSH — Protecting yourself from heat stress"
+
+key_risks:
+  - "Sustained exertion in direct sun is the highest-risk exposure for heat illness."
+  - "Dehydration builds over a shift; thirst is a late signal."
+
+protective_actions:
+  - "Drink about 1 cup (250 ml) of water every 15–20 minutes — do not wait until thirsty."
+  - "Take rest breaks in shade or indoors; if you can, shift heavy work to early morning or evening."
+  - "Wear light, loose, light-coloured clothing and a wide-brim hat; use sunscreen."
+  - "Work in pairs and watch each other for confusion, stumbling or stopping sweating."
+  - "New or returning workers should build up exposure over a week (acclimatise)."
+
+warning_signs:
+  - "Heat exhaustion: heavy sweating, weakness, dizziness, nausea, headache — stop, move to shade, sip water, cool the skin."
+  - "Heat stroke (EMERGENCY): confusion, fainting, hot skin, or sweating stops — call for help immediately and cool the person with water while waiting."
+
+messages:
+  watch: |
+    ☀️ HEAT WATCH — {location}, {date}
+    Heat index expected near {peak_hi}°C between {window}. If you work outdoors:
+    • Drink water every 15–20 min (don't wait to feel thirsty)
+    • Take shade breaks; do the hardest work before 10am if you can
+    • Watch your workmates for dizziness or confusion
+    Reply with a question any time.
+  warning: |
+    🟠 HEAT WARNING — {location}, {date}
+    Dangerous heat near {peak_hi}°C between {window}. Outdoor work is risky today.
+    • Rest in shade often; reschedule heavy tasks to early morning/evening
+    • Water every 15 min; add a pinch of salt to food or use oral rehydration
+    • Buddy up — if anyone is confused, stumbling or stops sweating, that is heat stroke: call {ambulance} and cool them with water now.
+  emergency: |
+    🔴 EXTREME HEAT — {location}, {date}
+    Heat index up to {peak_hi}°C. Avoid outdoor exertion between {window} if at all possible.
+    • If you must work: very short shifts, constant shade, water every 15 min
+    • Heat stroke kills fast — confusion/fainting/hot skin = call {ambulance} immediately, move to shade, pour water on the body and fan.
